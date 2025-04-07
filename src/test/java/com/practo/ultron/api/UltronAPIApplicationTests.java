@@ -1,10 +1,10 @@
-package com.telusko.joblisting;
+package com.practo.ultron.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JoblistingApplicationTests {
+class UltronAPIApplicationTests {
 
 	@Test
 	void contextLoads() {

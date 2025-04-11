@@ -11,7 +11,6 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "payment_modes")
 public class PaymentModes {
 
   @Id

@@ -1,6 +1,9 @@
-package com.practo.ultron.api.model;
+package com.practo.ultron.api.DTO;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -8,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class EstablishmentDetails {
+public class EstablishmentDetailsDTO {
 
   private List<String> establishmentPhotoIds;
 
@@ -23,4 +26,5 @@ public class EstablishmentDetails {
   private String establishmentDescription;
 
   private boolean establishmentOwnershipVerified;
+
 }

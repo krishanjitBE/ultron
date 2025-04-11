@@ -12,7 +12,6 @@ import java.util.UUID;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "establishment_address")
 @Builder
 public class EstablishmentAddress {
 

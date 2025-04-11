@@ -4,6 +4,7 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -17,15 +18,23 @@ public class Establishments {
   @Id
   private String establishmentId;
 
-  private List<String> doctorIds;
+  private String sessionId;
 
-  private String establishmentDetailsId;
+  private EstablishmentDetails establishmentDetails;
+
+  private EstablishmentMetaData establishmentMetaData;
+
+  private LocalDateTime createdAt;
+
+  private LocalDateTime updatedAt;
 
 
-  public Establishments(List<String> doctorIds, String establishmentDetailsId) {
+  public Establishments(EstablishmentDetails establishmentDetails,
+                        String sessionId, EstablishmentMetaData establishmentMetaData) {
     this.establishmentId = UUID.randomUUID().toString();
-    this.doctorIds = doctorIds;
-    this.establishmentDetailsId = establishmentDetailsId;
+    this.sessionId = sessionId;
+    this.establishmentDetails = establishmentDetails;
+    this.establishmentMetaData = establishmentMetaData;
   }
 }
 

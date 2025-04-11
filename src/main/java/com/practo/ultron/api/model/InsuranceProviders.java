@@ -4,27 +4,26 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "establishment_insurance_providers")
 public class InsuranceProviders {
 
   @Id
-  private String id;
+  private String insuranceProviderId;
 
-  private String name;
+  private String insuranceProviderName;
 
-  private String photoId;
+  private List<String> insurancePhotoIds;
 
 
-  public InsuranceProviders(String name, String photoId) {
-    this.id = UUID.randomUUID().toString();
-    this.name = name;
-    this.photoId = photoId;
+  public InsuranceProviders(String insuranceProviderName, List<String> insurancePhotoIds) {
+    this.insuranceProviderId = UUID.randomUUID().toString();
+    this.insuranceProviderName = insuranceProviderName;
+    this.insurancePhotoIds = insurancePhotoIds;
   }
 }
